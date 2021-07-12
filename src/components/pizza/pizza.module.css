@@ -1,0 +1,15 @@
+.break_div {
+    background-image: url('../../images/269.jpg');
+    background-size: 10%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+/* @media (min-width: 1024px) {
+    .break_div {
+        height: 100vh;
+    }
+} */
