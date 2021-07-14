@@ -10,7 +10,14 @@ function PizzaCard({ data }) {
             <div className={stylePizza.details}>
                 <p>{data.name}</p>
                 <p>{data.description}</p>
-                <p>Rating: {data.rating}</p>
+                <p>
+                    Rating: {data.rating}
+                    {data.isVeg ? (
+                        <p className={stylePizza.veg}></p>
+                    ) : (
+                        <span className={stylePizza.non_veg}></span>
+                    )}
+                </p>
                 <button className={stylePizza.pizza_btn}>view pizza</button>
             </div>
         </div>

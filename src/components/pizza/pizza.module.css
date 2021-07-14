@@ -1,3 +1,18 @@
+.sort_div {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    background-image: url('../../images/269.jpg');
+    background-size: 10%;
+    padding: 10px;
+    color: #fff;
+}
+
+.sort_div input {
+    margin-left: 5px;
+}
+
 .break_div {
     background-image: url('../../images/269.jpg');
     background-size: 10%;
