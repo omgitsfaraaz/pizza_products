@@ -5,7 +5,8 @@ import PizzaCard from './PizzaCard';
 class Breaking extends Component {
     state = {
         pizzaList: [],
-        sortType: ""
+        sortType: "",
+        vegSelected: false
     }
 
     API_URL = 'https://run.mocky.io/v3/ec196a02-aaf4-4c91-8f54-21e72f241b68';
@@ -44,6 +45,12 @@ class Breaking extends Component {
                 return 0;
             })
             this.setState({ pizzaList: sortedList });
+        } else if (sortType === "veg") {
+            sortedList = this.state.pizzaList.filter((a) => a.isVeg);
+            this.setState({ pizzaList: sortedList });
+        } else if (sortType === "nonveg") {
+            sortedList = this.state.pizzaList.filter((a) => !a.isVeg);
+            this.setState({ pizzaList: sortedList });
         }
     }
 
@@ -62,6 +69,14 @@ class Breaking extends Component {
                     <h3>
                         Clear filter:
                         <input type="radio" name="sort" onChange={() => this.sortPizzaList("reset")} />
+                    </h3>
+                    <h3>
+                        Veg:
+                        <input type="radio" name="sort" onChange={() => this.sortPizzaList("veg")} />
+                    </h3>
+                    <h3>
+                        Non-veg:
+                        <input type="radio" name="sort" onChange={() => this.sortPizzaList("nonveg")} />
                     </h3>
                 </div>
                 <div className={stylesbreak.break_div}>

@@ -9,6 +9,10 @@
     color: #fff;
 }
 
+h3 {
+    margin: 5px 5px;
+}
+
 .sort_div input {
     margin-left: 5px;
 }
